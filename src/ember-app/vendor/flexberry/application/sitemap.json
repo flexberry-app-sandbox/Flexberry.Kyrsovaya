@@ -1,0 +1,50 @@
+﻿{
+  "applicationCaption": "Kyrsovaya",
+  "applicationTitle": "Kyrsovaya",
+  "items": [
+    {
+      "link": null,
+      "menuName": "kyrsovaya",
+      "caption": "Kyrsovaya",
+      "title": "Kyrsovaya",
+      "children": [
+        {
+          "link": "i-i-s-kyrsovaya-билет-касса-l",
+          "menuName": null,
+          "caption": "Билетная касса",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kyrsovaya-билеты-l",
+          "menuName": null,
+          "caption": "Билеты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kyrsovaya-перевозчик-l",
+          "menuName": null,
+          "caption": "Перевозчик",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kyrsovaya-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kyrsovaya-транзакция-l",
+          "menuName": null,
+          "caption": "Транзакция",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

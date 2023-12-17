@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Билет",
+  "name": "IISKyrsovayaБилетE",
+  "className": "БилетE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrsovaya-билет",
+      "modelProjection": "БилетE"
+    }
+  ]
+}

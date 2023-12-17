@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Клиент_",
+  "name": "IISKyrsovayaКлиент_E",
+  "className": "Клиент_E",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrsovaya-клиент",
+      "modelProjection": "Клиент_E"
+    }
+  ]
+}

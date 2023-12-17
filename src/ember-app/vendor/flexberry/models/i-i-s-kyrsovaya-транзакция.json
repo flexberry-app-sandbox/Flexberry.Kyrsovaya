@@ -1,0 +1,173 @@
+﻿{
+  "name": "IISKyrsovayaТранзакция_",
+  "modelName": "i-i-s-kyrsovaya-транзакция",
+  "className": "Транзакция_",
+  "nameSpace": "IIS.Kyrsovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "билеты",
+      "relatedTo": "i-i-s-kyrsovaya-билеты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиент_",
+      "relatedTo": "i-i-s-kyrsovaya-клиент",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "Транзакция_E",
+      "modelName": "i-i-s-kyrsovaya-транзакция",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ПунктОтпр",
+          "lookupValueField": "пунктОтпр",
+          "relationName": "Билеты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "пунктОтпр",
+              "caption": "Пункт отпр",
+              "hidden": true,
+              "index": 3
+            },
+            {
+              "name": "пунктНазнач",
+              "caption": "Пункт назначения",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Билеты",
+          "name": "билеты",
+          "relatedTo": "i-i-s-kyrsovaya-билеты",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиент_",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": 5,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "клиент_",
+          "relatedTo": "i-i-s-kyrsovaya-клиент",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "Транзакция_L",
+      "modelName": "i-i-s-kyrsovaya-транзакция",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Билеты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "пунктОтпр",
+              "caption": "Пункт отпр",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "пунктНазнач",
+              "caption": "",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Пункт отпр",
+          "name": "билеты",
+          "relatedTo": "i-i-s-kyrsovaya-билеты",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиент_",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "банкСчет",
+              "caption": "Банк счет",
+              "hidden": false,
+              "index": 2
+            },
+            {
+              "name": "фИО",
+              "caption": "",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Банк счет",
+          "name": "клиент_",
+          "relatedTo": "i-i-s-kyrsovaya-клиент",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

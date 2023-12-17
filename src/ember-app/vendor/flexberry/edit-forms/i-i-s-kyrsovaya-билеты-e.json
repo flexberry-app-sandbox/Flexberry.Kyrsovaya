@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Клиент_",
+      "projection": "Клиент_L",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "БилетКасса",
+      "projection": "БилетКассаL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Перевозчик",
+      "projection": "ПеревозчикL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Билеты",
+  "name": "IISKyrsovayaБилетыE",
+  "className": "БилетыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrsovaya-билеты",
+      "modelProjection": "БилетыE"
+    }
+  ]
+}

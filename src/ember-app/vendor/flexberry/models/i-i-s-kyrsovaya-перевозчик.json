@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISKyrsovayaПеревозчик",
+  "modelName": "i-i-s-kyrsovaya-перевозчик",
+  "className": "Перевозчик",
+  "nameSpace": "IIS.Kyrsovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПеревозчикE",
+      "modelName": "i-i-s-kyrsovaya-перевозчик",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПеревозчикL",
+      "modelName": "i-i-s-kyrsovaya-перевозчик",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

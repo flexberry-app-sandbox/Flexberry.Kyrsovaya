@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kyrsovaya-билеты-e",
+  "editForm": "i-i-s-kyrsovaya-билеты-e",
+  "external": false,
+  "caption": "Билеты",
+  "name": "IISKyrsovayaБилетыL",
+  "className": "БилетыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrsovaya-билеты",
+      "modelProjection": "БилетыL"
+    }
+  ]
+}

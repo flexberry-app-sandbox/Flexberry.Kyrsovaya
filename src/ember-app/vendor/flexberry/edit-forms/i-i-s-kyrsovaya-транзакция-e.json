@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Билеты",
+      "projection": "БилетыL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Клиент_",
+      "projection": "Клиент_L",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Транзакция_",
+  "name": "IISKyrsovayaТранзакция_E",
+  "className": "Транзакция_E",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrsovaya-транзакция",
+      "modelProjection": "Транзакция_E"
+    }
+  ]
+}

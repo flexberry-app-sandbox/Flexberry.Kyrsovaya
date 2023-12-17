@@ -1,0 +1,30 @@
+﻿{
+  "name": "IISKyrsovayaБилет",
+  "modelName": "i-i-s-kyrsovaya-билет",
+  "className": "Билет",
+  "nameSpace": "IIS.Kyrsovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "БилетE",
+      "modelName": "i-i-s-kyrsovaya-билет",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "БилетL",
+      "modelName": "i-i-s-kyrsovaya-билет",
+      "attrs": [],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

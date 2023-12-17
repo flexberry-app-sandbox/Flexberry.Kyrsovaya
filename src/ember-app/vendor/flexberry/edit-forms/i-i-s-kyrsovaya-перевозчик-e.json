@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Перевозчик",
+  "name": "IISKyrsovayaПеревозчикE",
+  "className": "ПеревозчикE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrsovaya-перевозчик",
+      "modelProjection": "ПеревозчикE"
+    }
+  ]
+}

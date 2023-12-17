@@ -1,0 +1,135 @@
+<h3 class="ui header">{{t "forms.i-i-s-kyrsovaya-билеты-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kyrsovaya-билеты-e.датаПокупки-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаПокупки
+      class=(if (v-get validationModel "датаПокупки" "isInvalid") "error")
+      data-test-i-i-s-kyrsovaya-билеты-e-датаПокупки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаПокупки" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.времяПокупки
+      class=(if (v-get validationModel "времяПокупки" "isInvalid") "error")
+      label=(t "forms.i-i-s-kyrsovaya-билеты-e.времяПокупки-caption")
+      data-test-i-i-s-kyrsovaya-билеты-e-времяПокупки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "времяПокупки" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kyrsovaya-билеты-e.датаПоездки-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаПоездки
+      class=(if (v-get validationModel "датаПоездки" "isInvalid") "error")
+      data-test-i-i-s-kyrsovaya-билеты-e-датаПоездки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаПоездки" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.пунктОтпр
+      class=(if (v-get validationModel "пунктОтпр" "isInvalid") "error")
+      label=(t "forms.i-i-s-kyrsovaya-билеты-e.пунктОтпр-caption")
+      data-test-i-i-s-kyrsovaya-билеты-e-пунктОтпр=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "пунктОтпр" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.пунктНазнач
+      class=(if (v-get validationModel "пунктНазнач" "isInvalid") "error")
+      label=(t "forms.i-i-s-kyrsovaya-билеты-e.пунктНазнач-caption")
+      data-test-i-i-s-kyrsovaya-билеты-e-пунктНазнач=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "пунктНазнач" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.место
+      class=(if (v-get validationModel "место" "isInvalid") "error")
+      label=(t "forms.i-i-s-kyrsovaya-билеты-e.место-caption")
+      data-test-i-i-s-kyrsovaya-билеты-e-место=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "место" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kyrsovaya-билеты-e.клиент_-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.клиент_
+      displayAttributeName="банкСчет"
+      autocomplete=true
+      relationName="клиент_"
+      projection="Клиент_L"
+      title=(t "forms.i-i-s-kyrsovaya-билеты-e.клиент_-caption")
+      readonly=readonly
+      componentName="клиент_Lookup"
+      class=(if (v-get validationModel "клиент_" "isInvalid") "error")
+      data-test-i-i-s-kyrsovaya-билеты-e-клиент_=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "клиент_" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.клиент_.фИО
+      class=(if (v-get validationModel.клиент_ "фИО" "isInvalid") "error")
+      label=(t "forms.i-i-s-kyrsovaya-билеты-e.клиент_.фИО-caption")
+      data-test-i-i-s-kyrsovaya-билеты-e-клиент_-фИО=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.клиент_ "фИО" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kyrsovaya-билеты-e.билетКасса-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.билетКасса
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="билетКасса"
+      projection="БилетКассаL"
+      title=(t "forms.i-i-s-kyrsovaya-билеты-e.билетКасса-caption")
+      readonly=readonly
+      componentName="билетКассаLookup"
+      class=(if (v-get validationModel "билетКасса" "isInvalid") "error")
+      data-test-i-i-s-kyrsovaya-билеты-e-билетКасса=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "билетКасса" "message")}}
+  </div>
+</form>

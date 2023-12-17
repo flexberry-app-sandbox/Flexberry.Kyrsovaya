@@ -1,0 +1,321 @@
+﻿{
+  "name": "IISKyrsovayaБилеты",
+  "modelName": "i-i-s-kyrsovaya-билеты",
+  "className": "Билеты",
+  "nameSpace": "IIS.Kyrsovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "времяПокупки",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаПоездки",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаПокупки",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "место",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "пунктНазнач",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "пунктОтпр",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "билетКасса",
+      "relatedTo": "i-i-s-kyrsovaya-билет-касса",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиент_",
+      "relatedTo": "i-i-s-kyrsovaya-клиент",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "перевозчик",
+      "relatedTo": "i-i-s-kyrsovaya-перевозчик",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "БилетыE",
+      "modelName": "i-i-s-kyrsovaya-билеты",
+      "attrs": [
+        {
+          "name": "датаПокупки",
+          "caption": "Дата покупки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяПокупки",
+          "caption": "Время покупки",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаПоездки",
+          "caption": "Дата поездки",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "пунктОтпр",
+          "caption": "Пункт отправления",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "пунктНазнач",
+          "caption": "Пункт назначения",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "место",
+          "caption": "Место",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Перевозчик",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 12,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "перевозчик",
+          "relatedTo": "i-i-s-kyrsovaya-перевозчик",
+          "inverse": null
+        },
+        {
+          "lookupValue": "БанкСчет",
+          "lookupValueField": "банкСчет",
+          "relationName": "Клиент_",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО покупателя",
+              "hidden": false,
+              "index": 8
+            },
+            {
+              "name": "банкСчет",
+              "caption": "Банковский счет",
+              "hidden": true,
+              "index": 9
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Покупатель",
+          "name": "клиент_",
+          "relatedTo": "i-i-s-kyrsovaya-клиент",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "БилетКасса",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Место расчета",
+              "hidden": true,
+              "index": 11
+            }
+          ],
+          "index": 10,
+          "type": "standard",
+          "caption": "Билет касса",
+          "name": "билетКасса",
+          "relatedTo": "i-i-s-kyrsovaya-билет-касса",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "БилетыL",
+      "modelName": "i-i-s-kyrsovaya-билеты",
+      "attrs": [
+        {
+          "name": "пунктОтпр",
+          "caption": "Пункт отпр",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаПоездки",
+          "caption": "Дата поездки",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаПокупки",
+          "caption": "Дата покупки",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "место",
+          "caption": "Место",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "пунктНазнач",
+          "caption": "Пункт назнач",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "времяПокупки",
+          "caption": "Время покупки",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиент_",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "банкСчет",
+              "caption": "Банк счет",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "фИО",
+              "caption": "",
+              "hidden": false,
+              "index": 9
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Банк счет",
+          "name": "клиент_",
+          "relatedTo": "i-i-s-kyrsovaya-клиент",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "БилетКасса",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "билетКасса",
+          "relatedTo": "i-i-s-kyrsovaya-билет-касса",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Перевозчик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 8
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "перевозчик",
+          "relatedTo": "i-i-s-kyrsovaya-перевозчик",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kyrsovaya-транзакция-e",
+  "editForm": "i-i-s-kyrsovaya-транзакция-e",
+  "external": false,
+  "caption": "Транзакция_",
+  "name": "IISKyrsovayaТранзакция_L",
+  "className": "Транзакция_L",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrsovaya-транзакция",
+      "modelProjection": "Транзакция_L"
+    }
+  ]
+}
